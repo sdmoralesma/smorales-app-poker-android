@@ -173,7 +173,7 @@ public class SpriteCartas extends Sprite {
 
 	}
 
-	@Override
+	/*
 	public boolean isCollition(float xx, float yy) {
 		return (xx > x1 && xx < x1 + width && yy > y1 && yy < y1 + height
 				|| xx > x2 && xx < x2 + width && yy > y2 && yy < y2 + height
@@ -181,5 +181,27 @@ public class SpriteCartas extends Sprite {
 				|| xx > x4 && xx < x4 + width && yy > y4 && yy < y4 + height || xx > x5
 				&& xx < x5 + width && yy > y5 && yy < y5 + height);
 	}
-
+	*/
+	
+	
+	public int isCollitionCard(float xx, float yy) {
+		int card = 0;
+		if(xx > x1 && xx < x1 + width && yy > y1 && yy < y1 + height){
+			card = 1;			
+		}
+		if(xx > x2 && xx < x2 + width && yy > y2 && yy < y2 + height){
+			card = 2;			
+		}
+		if(xx > x3 && xx < x3 + width && yy > y3 && yy < y3 + height){
+			card = 3;			
+		}
+		if(xx > x4 && xx < x4 + width && yy > y4 && yy < y4 + height){
+			card = 4;			
+		}
+		if(xx > x5 && xx < x5 + width && yy > y5 && yy < y5 + height){
+			card = 5;			
+		}
+		return card;
+	}
+	
 }

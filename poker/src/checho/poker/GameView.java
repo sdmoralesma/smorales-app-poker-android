@@ -1,5 +1,6 @@
 package checho.poker;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -25,6 +26,7 @@ public class GameView extends SurfaceView {
 	private Background background;
 	private long lastClick;
 	private int flag1;
+	int card = 0;
 
 	/* Sound variables */
 	private SoundPool sounds;
@@ -123,6 +125,7 @@ public class GameView extends SurfaceView {
 		canvas.restore();
 	}
 
+	@SuppressLint("DrawAllocation")
 	@Override
 	protected void onDraw(Canvas canvas) {
 
@@ -146,11 +149,15 @@ public class GameView extends SurfaceView {
 			cover.printSprite(canvas);
 			break;
 		case 1:
-			sprite.printSprite(canvas);
+			sprite = new SpriteCartas(bmpa, bmpb, bmpc, bmpd, 100);
+			flag1 = 3;
 			break;
 		case 2:
 			sprite.printSprite(canvas);
-			hold.printSprite(canvas);
+			hold.printSprite(canvas,card);
+			break;
+		case 3:
+			sprite.printSprite(canvas);
 			break;
 		default:
 			break;
@@ -162,7 +169,7 @@ public class GameView extends SurfaceView {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-
+		
 		if (System.currentTimeMillis() - lastClick > 300) {
 			lastClick = System.currentTimeMillis();
 			float x = event.getX();
@@ -179,10 +186,38 @@ public class GameView extends SurfaceView {
 			}
 
 			synchronized (getHolder()) {
+				card = sprite.isCollitionCard(x, y);		
+				switch (card) {
+				case 1:
+					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
+					flag1 = 2;
+					break;
+				case 2:
+					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
+					flag1 = 2;
+					break;
+				case 3:
+					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
+					flag1 = 2;
+					break;
+				case 4:
+					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
+					flag1 = 2;
+					break;
+				case 5:
+					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
+					flag1 = 2;
+					break;				
+				default:
+					break;
+				}
+				
+/*
 				if (sprite.isCollition(x, y)) {
 					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
 					flag1 = 2;
 				}
+*/
 			}
 		}
 		return true;

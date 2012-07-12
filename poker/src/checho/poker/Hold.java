@@ -4,15 +4,38 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Rect;
 
-public class Hold extends Sprite{
-	
+public class Hold extends Sprite {
+
 	public Hold(Bitmap bmp, int id) {
-		super(bmp, id);	
+		super(bmp, id);
 	}
-	
-	public void printSprite(Canvas canvas) {
-		x1 = 230;
-		y1 = 350;
+
+	public void printSprite(Canvas canvas, int card) {
+
+		switch (card) {
+		case 1:
+			x1 = 30;
+			y1 = 0;
+			break;
+		case 2:
+			x1 = 30;
+			y1 = 90;
+			break;
+		case 3:
+			x1 = 30;
+			y1 = 180;
+			break;
+		case 4:
+			x1 = 30;
+			y1 = 270;
+			break;
+		case 5:
+			x1 = 30;
+			y1 = 360;
+			break;
+		default:
+			break;
+		}
 
 		int srcX1 = col1 * width;
 		int srcY1 = row1 * height;
