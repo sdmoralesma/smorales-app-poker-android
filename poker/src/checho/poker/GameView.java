@@ -154,7 +154,7 @@ public class GameView extends SurfaceView {
 			break;
 		case 2:
 			sprite.printSprite(canvas);
-			hold.printSprite(canvas,card);
+			hold.printSprite(canvas, card);
 			break;
 		case 3:
 			sprite.printSprite(canvas);
@@ -169,7 +169,7 @@ public class GameView extends SurfaceView {
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
-		
+
 		if (System.currentTimeMillis() - lastClick > 300) {
 			lastClick = System.currentTimeMillis();
 			float x = event.getX();
@@ -186,7 +186,7 @@ public class GameView extends SurfaceView {
 			}
 
 			synchronized (getHolder()) {
-				card = sprite.isCollitionCard(x, y);		
+				card = sprite.isCollitionCard(x, y);
 				switch (card) {
 				case 1:
 					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
@@ -207,17 +207,15 @@ public class GameView extends SurfaceView {
 				case 5:
 					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
 					flag1 = 2;
-					break;				
+					break;
 				default:
 					break;
 				}
-				
-/*
-				if (sprite.isCollition(x, y)) {
-					sounds.play(sbet, 0.7f, 0.7f, 0, 0, 1f);
-					flag1 = 2;
-				}
-*/
+
+				/*
+				 * if (sprite.isCollition(x, y)) { sounds.play(sbet, 0.7f, 0.7f,
+				 * 0, 0, 1f); flag1 = 2; }
+				 */
 			}
 		}
 		return true;
