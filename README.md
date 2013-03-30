@@ -14,7 +14,7 @@ Poker VideoGame
 Videojuego sencillo para conocer los conceptos en desarrollo de videojuegos tales como: Diseño de interfaz,
 diseño de experiencia, audio, video y para explorar las capacidades de la plataforma.
 
-##TODO: 
+##TODO
 * Add DSP support
 * Improve design based on patterns
 
