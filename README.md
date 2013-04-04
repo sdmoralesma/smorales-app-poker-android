@@ -3,7 +3,7 @@
 * *Author* : [Sergio Morales](http://www.linkedin.com/profile/view?id=199182063)
 * *Level* : Basic
 * *Technologies* : Beagle Board, Android 2.3, Linux Kernel
-* *Peripherals* : USB Ports (KeyBoard + Mouse), HDMI Video, Audio Surround, MicroSD Storage
+* *Peripherals* : USB Ports (KeyBoard + Mouse), HDMI Video, Audio, MicroSD Storage
 * *DataBase* : SqLite (Still not implemented)
 * *Summary* : An application for explorer the beagle board platform as a videogame console.
 
