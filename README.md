@@ -4,7 +4,7 @@
 * *Level* : Basic
 * *Technologies* : Beagle Board, Android 2.3, Linux Kernel
 * *Peripherals* : USB Ports (KeyBoard + Mouse), HDMI Video, Audio Surround, MicroSD Storage
-* *DataBase* : SqLite
+* *DataBase* : SqLite (Still not implemented)
 * *Summary* : An application for explorer the beagle board platform as a videogame console.
 
 
@@ -15,6 +15,7 @@ Videojuego sencillo para conocer los conceptos en desarrollo de videojuegos tale
 diseño de experiencia, audio, video y para explorar las capacidades de la plataforma.
 
 ##TODO
+* Add persistence with SQLite
 * Add DSP support
 * Improve design based on patterns
 
