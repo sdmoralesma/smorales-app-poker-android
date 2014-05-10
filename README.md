@@ -11,13 +11,13 @@
 Poker VideoGame
 ===============
 
-Videojuego sencillo para conocer los conceptos en desarrollo de videojuegos tales como: Diseño de interfaz,
-diseño de experiencia, audio, video y para explorar las capacidades de la plataforma.
+Simple videgame to explore videogame development (UX Design, UE Design), and show Beagle's features (Audio, Video) 
+
+![screenshot-1348024118783](https://cloud.githubusercontent.com/assets/1953226/2936860/3c536d14-d877-11e3-984d-0a1f7d079382.png)
 
 ##TODO
-* Add persistence with SQLite
+* Improve business logic
 * Add DSP support
-* Improve design based on patterns
 
 ## Licensing
 
