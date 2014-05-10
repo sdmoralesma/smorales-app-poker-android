@@ -11,7 +11,7 @@
 Poker VideoGame
 ===============
 
-Simple videgame to explore videogame development (UX Design, UE Design), and show Beagle's features (Audio, Video) 
+Simple videgame to explore some concepts of development game development and show Beagle's features (Audio, Video) 
 
 ![screenshot-1348024118783](https://cloud.githubusercontent.com/assets/1953226/2936860/3c536d14-d877-11e3-984d-0a1f7d079382.png)
 
